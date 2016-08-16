@@ -1,1 +1,5 @@
-{}
+{
+	"global": {
+		"variable": "Das ist ein globale Variable"
+	}
+}
