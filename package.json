@@ -1,0 +1,31 @@
+{
+  "name": "dh-semi-dynamic",
+  "version": "0.0.1",
+  "description": "HTML, CSS and Handlebars Template Language",
+  "main": "www/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaete-hamburger/dh-semi-dynamic.git"
+  },
+  "author": "Michael Czechowski <mail@dailysh.it> (nextlevelshit)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/kaete-hamburger/dh-semi-dynamic/issues"
+  },
+  "homepage": "https://github.com/kaete-hamburger/dh-semi-dynamic#readme",
+  "dependencies": {
+    "handlebars": "^4.0.5",
+    "jquery": "^3.1.0",
+    "run-sequence": "^1.2.2"
+  },
+  "devDependencies": {
+    "fs": "0.0.2",
+    "gulp": "^3.9.1",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-data": "^1.2.1",
+    "gulp-rename": "^1.2.2"
+  }
+}
