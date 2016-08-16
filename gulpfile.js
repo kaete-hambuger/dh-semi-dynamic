@@ -3,8 +3,11 @@
 // Set global configuration
 var config = {
 	dist: 'www',
-	globalMockDataJson: './src/global-data.json',
+	styles: 'www/css/style.css',
+	handlebarsGlobalData: './src/global-data.json',
+	handlebarsAll: './src/**/*.{hbs,json}',
 	handlebarsPages: './src/pages/**/*.hbs',
+	handlebarsPartials: './src/partials',
 	handlebarsTarget: './www'
 };
 
@@ -15,22 +18,34 @@ var gulp = require('gulp');
 var fs = require('fs');
 var data = require('gulp-data');
 var rename = require('gulp-rename');
+var del = require('del');
+var watch = require('gulp-watch');
 
 // Add default task
 gulp.task('default', function(cb) {
   	runSequence(
-		'compileStaticHtml'
+		'compileStaticHtml',
+		'watch'
   	)}
 );
 
+// Watch for changes and reload task
+gulp.task('watch', function(cb) {
+  watch(config.styles, function() {
+    gulp.start('compileStaticHtml')
+      .on('end', cb);
+  });
+  watch(config.handlebarsAll, function() {
+    gulp.start('compileStaticHtml')
+      .on('end', cb);
+  });
+});
+
 // Compile dynamic handlebars templates to static HTML
 gulp.task('compileStaticHtml', function() {
-  var globalMockDataJson = JSON.parse(fs.readFileSync(config.globalMockDataJson));
+  var globalMockDataJson = JSON.parse(fs.readFileSync(config.handlebarsGlobalData));
 
-  //del.sync(config.handlebarsTarget + '/**/*');
-
-  //var partialDirs = helpers.createHandleBarsPartialDirList(config.handlebarsPartials);
-
+  del.sync(config.handlebarsTarget + '/**/*');
 
   return gulp.src(config.handlebarsPages)
   	.pipe(data(function(file) {
@@ -39,7 +54,7 @@ gulp.task('compileStaticHtml', function() {
     }))
     .pipe(handlebars(globalMockDataJson,
       {
-        batch: ['./src/partials']
+        batch: [config.handlebarsPartials]
       }))
     .pipe(rename({
       extname: '.html'
@@ -56,25 +71,3 @@ gulp.task('compileStaticHtml', function() {
     .pipe(gulp.dest(config.handlebarsTarget));
     //.on('end', browserSync.reload);
 });
-
-/*// Helper functions
-function getSubDirectories(srcPath) {
-  	return fs.readdirSync(srcPath).filter(function(file) {
-    	return fs.statSync(path.join(srcPath, file)).isDirectory();
-  	})
-};
-
-function createHandleBarsPartialDirList(handlebarsPartials) {
-	var subPartialDirs = this.getSubDirectories(handlebarsPartials);
-	var partialDirs = [];
-
-	for (var i = 0; i < subPartialDirs.length; i++) {
-		var partialDir = handlebarsPartials + subPartialDirs[i] + '/';
-		partialDirs.push(partialDir);
-	}
-
-	// add partials base dir
-	partialDirs.push(handlebarsPartials);
-
-	return partialDirs;
-}	*/

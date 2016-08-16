@@ -22,10 +22,12 @@
     "run-sequence": "^1.2.2"
   },
   "devDependencies": {
+    "del": "^2.2.2",
     "fs": "0.0.2",
     "gulp": "^3.9.1",
     "gulp-compile-handlebars": "^0.6.1",
     "gulp-data": "^1.2.1",
-    "gulp-rename": "^1.2.2"
+    "gulp-rename": "^1.2.2",
+    "gulp-watch": "^4.3.9"
   }
 }
