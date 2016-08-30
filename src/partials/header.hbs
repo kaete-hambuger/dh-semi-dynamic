@@ -2,9 +2,20 @@
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-<p>Header</p>
-<nav>
-	Navigation
-</nav>
+
+<div>
+	<nav>
+		<ul>
+			{{#each global.navigation }}
+				<li>
+					<a href="{{ this.url }}" title="{{ this.hoverText }}">
+						{{ this.title }}
+					</a>
+				</li>
+			{{/each}}
+		</ul>
+	</nav>
+</div>

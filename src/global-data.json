@@ -1,7 +1,16 @@
 {
 	"global": {
-		"variable": {
-			"test": 1000
-		}
+		"navigation": [
+			{
+				"url": "/",
+				"hoverText": "Hier geht's zur Startseite",
+				"title": "Startseite"
+			},
+			{
+				"url": "biographie.html",
+				"hoverText": "Hier geht's zur Biographie, geil geil geil",
+				"title": "Biographie"
+			}
+		]
 	}
 }
