@@ -10,6 +10,11 @@
 				"url": "biographie.html",
 				"hoverText": "Hier geht's zur Biographie, geil geil geil",
 				"title": "Biographie"
+			},
+			{
+				"url": "werk.html",
+				"hoverText": "Hier geht's zum Werk, twerk twerk twerk",
+				"title": "Werk"
 			}
 		]
 	}
