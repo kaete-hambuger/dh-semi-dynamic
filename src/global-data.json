@@ -15,6 +15,11 @@
 				"url": "werk.html",
 				"hoverText": "Hier geht's zum Werk, twerk twerk twerk",
 				"title": "Werk"
+			},
+			{
+				"url": "projekt.html",
+				"hoverText": "Hier geht's zum Projekt, object object object",
+				"title": "Werk"
 			}
 		]
 	}
