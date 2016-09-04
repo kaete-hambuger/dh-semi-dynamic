@@ -1,5 +1,18 @@
-<p>Footer</p>
-<p>Auch hier gibt es: {{ global.variable.test }}</p>
-
-</body> 
+<footer>
+	<div>
+		„Die Attribute mitleidig und verächtlich sind seit dem 19. Jahrhundert nahezu so unauffällig wie in früheren Jahrhunderten die positiven Attribute des teilnehmenden Gefühls."
+	 </div>
+	<div>
+		<ul>
+			{{#each global.footer }}
+				<li>
+					<a href="{{ this.url }}" title="{{ this.hoverText }}">
+						{{ this.title }}
+					</a>
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+</footer>
+</body>
 </html>

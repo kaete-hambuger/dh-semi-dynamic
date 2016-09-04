@@ -4,7 +4,7 @@
 			{
 				"url": "/",
 				"hoverText": "Hier geht's zur Startseite",
-				"title": "Startseite"
+				"title": "Home"
 			},
 			{
 				"url": "biographie.html",
@@ -19,7 +19,21 @@
 			{
 				"url": "projekt.html",
 				"hoverText": "Hier geht's zum Projekt, object object object",
-				"title": "Projekt"
+				"title": "Über das Projekt"
+			}
+		]
+	}
+	{
+		"footer": [
+			{
+				"url": "#",
+				"hoverText": "Hier geht's zum Impressum",
+				"title": "Impressum"
+			},
+			{
+				"url": "#",
+				"hoverText": "Hier geht's zum Kontakt",
+				"title": "Kontakt"
 			}
 		]
 	}
