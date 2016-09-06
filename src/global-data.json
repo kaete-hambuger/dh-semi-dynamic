@@ -21,18 +21,18 @@
 				"hoverText": "Hier geht's zum Projekt, object object object",
 				"title": "Über das Projekt"
 			}
+		],
+		"footer": [
+			{
+				"url": "#",
+				"hoverText": "Hier geht's zum Impressum",
+				"title": "Impressum"
+			},
+			{
+				"url": "#",
+				"hoverText": "Hier geht's zum Kontakt",
+				"title": "Kontakt"
+			}
 		]
-	},
-	"footer": [
-		{
-			"url": "#",
-			"hoverText": "Hier geht's zum Impressum",
-			"title": "Impressum"
-		},
-		{
-			"url": "#",
-			"hoverText": "Hier geht's zum Kontakt",
-			"title": "Kontakt"
-		}
-	]
+	}
 }

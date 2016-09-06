@@ -1,18 +1,32 @@
+  	</div>
+  </div>
+</main>
 <footer>
-	<div>
-		„Die Attribute mitleidig und verächtlich sind seit dem 19. Jahrhundert nahezu so unauffällig wie in früheren Jahrhunderten die positiven Attribute des teilnehmenden Gefühls."
-	 </div>
-	<div>
-		<ul>
-			{{#each global.footer }}
-				<li>
-					<a href="{{ this.url }}" title="{{ this.hoverText }}">
-						{{ this.title }}
-					</a>
-				</li>
-			{{/each}}
-		</ul>
-	</div>
+	<div class="container">
+		<div class="space-vertical">	
+			<div class="row">
+			
+				<div class="cell cell-50">
+					 <div class="quote">
+							„Die Attribute mitleidig und verächtlich sind seit dem 19. Jahrhundert nahezu so unauffällig wie in früheren Jahrhunderten die positiven Attribute des teilnehmenden Gefühls."
+						</div>
+					</div>
+
+					<div class="cell cell-50">
+					 	<ul class="list-vertical float-right">
+							{{#each global.footer }}
+						 		<li class="list-item">
+									<a href="{{ this.url }}" title="{{ this.hoverText }}">
+										{{ this.title }}
+									</a>
+								</li>
+							{{/each}}
+				 		</ul>
+					</div>
+
+				</div>
+			</div>
+		</div>
 </footer>
 </body>
 </html>
