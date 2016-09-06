@@ -6,4 +6,35 @@
 	{{{ page.teaser }}}
 </div>
 
+<table class="table">
+	<tr>
+		<th>
+			Titel
+		</th>
+		<th>
+			Erscheinungsjahr
+		</th>
+		<th>
+			&nbsp;
+		</th>
+	</tr>
+	{{#each work}}
+		<tr>
+			<td>
+				{{ this.title }}
+			</td>
+			<td>
+				{{ this.year }}
+			</td>
+			<td class="links">
+				{{#if this.links }}
+					{{#each this.links}}
+						<a href="{{this.url}}">{{this.text}}</a><br>
+					{{/each}}
+				{{/if}}
+			</td>
+		</tr>
+	{{/each}}
+</table>
+
 {{> footer }}
