@@ -69,7 +69,8 @@ gulp.task('sass', function() {
     }))
     .pipe(sourcemaps.init())
     .pipe(sass({errLogToConsole: true}))
-    .pipe(autoprefixer())
+    //causes errors
+    //.pipe(autoprefixer())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(config.stylesOutput))
     .pipe(browserSync.stream());
