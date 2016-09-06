@@ -3,7 +3,8 @@
 // Set global configuration
 var config = {
 	dist: 'www',
-	styles: 'www/css/style.css',
+	styles: './src/styles/*.scss',
+  stylesOutput: './www/styles',
 	handlebarsGlobalData: './src/global-data.json',
 	handlebarsAll: './src/**/*.{hbs,json}',
 	handlebarsPages: './src/pages/**/*.hbs',
@@ -22,13 +23,18 @@ var del = require('del');
 var watch = require('gulp-watch');
 var browserSync = require('browser-sync');
 var modRewrite = require('connect-modrewrite');
+var sass = require('gulp-sass').sync;
+var autoprefixer = require('gulp-autoprefixer');
+var sourcemaps = require('gulp-sourcemaps');
+var plumber = require('gulp-plumber');
 
 // Add default task
 gulp.task('default', function(cb) {
   	runSequence(
-		'compileStaticHtml',
-    'browserSync',
-		'watch'
+  		'compileStaticHtml',
+      'sass',
+      'browserSync',
+  		'watch'
   	)}
 );
 
@@ -42,7 +48,33 @@ gulp.task('watch', function(cb) {
     gulp.start('compileStaticHtml')
       .on('end', cb);
   });
+   watch(config.styles, function() {
+    gulp.start('sass')
+      .on('end', cb);
+  });
 });
+
+// Gather stylings and compile css
+gulp.task('sass', function() {
+  var sources = gulp.src([
+    config.styles
+  ]);
+
+  return sources
+    .pipe(plumber({
+      handleError: function(err) {
+        console.log(err);
+        this.emit('end');
+      }
+    }))
+    .pipe(sourcemaps.init())
+    .pipe(sass({errLogToConsole: true}))
+    .pipe(autoprefixer())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(config.stylesOutput))
+    .pipe(browserSync.stream());
+});
+
 
 // BrowserSync
 gulp.task('browserSync', function() {
@@ -63,12 +95,12 @@ gulp.task('browserSync', function() {
   });
 });
 
-
 // Compile dynamic handlebars templates to static HTML
 gulp.task('compileStaticHtml', function() {
   var globalMockDataJson = JSON.parse(fs.readFileSync(config.handlebarsGlobalData));
 
-  del.sync(config.handlebarsTarget + '/**/*');
+  // Not used for now, till workflow is comlpete
+  // del.sync(config.handlebarsTarget + '/**/*');
 
   return gulp.src(config.handlebarsPages)
   	.pipe(data(function(file) {
