@@ -1,3 +1,228 @@
-body {
-	background: pink;
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #0C0C0C;
+}
+
+
+footer {
+  background-color: #A4A4A4;
+  color: #606060;
+  height: 120px;
+  font-size: 17px;
+}
+
+
+main {
+  min-height: 80vh;
+}
+
+a {
+  text-decoration: none;
+  color: #243F91;
+  font-weight: 400;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+a:active {
+  opacity: 0.6;
+}
+
+/*
+ * Resets
+ */
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+/*
+ * Helper Classes
+ */
+
+.container {
+  display: block;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.container:before {
+  content: " ";
+  display: table;
+}
+
+.space-vertical {
+  margin: 32px 0;
+}
+
+.row {
+  margin: 0 -16px;
+}
+
+.cell {
+  display: inline-block;
+  padding: 0 16px;
+  float: left;
+}
+
+.cell-33 {
+  width: 33.333333%;
+}
+
+.cell-50 {
+  width: 50%;
+}
+
+.cell-66 {
+  width: 66.66666%;
+}
+
+.list-vertical {
+  margin: 0 -16px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.list-item {
+  display: inline-block;
+  padding: 0 16px;
+}
+
+.float-right {
+  float: right;
+}
+
+.quote {
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+/**
+ * Header
+ */
+
+img.header-image {
+  display: block;
+  margin: 10px auto;
+}
+
+
+
+/*
+ * Navigation
+ */
+
+nav {
+  width: 100%;
+  background: #3a3a3a;
+  font-size: 16px;
+}
+
+.header img {
+  width: 300px;
+  height: 100px;
+  background: #000;
+}
+
+
+/*
+***********************************************************************************
+ZWEITER SCHRITT
+*/
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+  text-decoration: none;
+}
+
+nav ul li {
+  position: relative;
+  display: inline-block;
+  list-style: none;
+}
+ 
+nav ul li:hover,
+nav ul li.active {
+  background: #243F91;
+}
+ 
+nav ul li a {
+    padding: 20px;
+}
+
+/*
+***********************************************************************************
+VIERTER SCHRITT
+*/
+
+nav ul ul {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  background: #333;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+}
+ 
+nav ul ul li {
+  float: none;
+  width: 300px;
+  border-bottom: 1px solid #555;
+}
+ 
+nav ul ul li a {
+  padding: 10px 20px;
+}
+
+/*
+***********************************************************************************
+FÜNFTER SCHRITT
+*/
+
+nav ul li:hover > ul {
+  top: 100%;
+  left: 0;
+}
+
+/*
+***********************************************************************************
+SECHSTER SCHRITT
+*/
+
+nav ul ul li:hover > ul {
+  top: 0;
+  left: 300px;
+}
+
+/*
+***********************************************************************************
+FEINTUNING
+*/
+
+nav ul li.submenu > a:after {
+  position: relative;
+  float: right;
+  content: '';
+  margin-left: 10px;
+  margin-top: 5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  border-bottom: 5px solid transparent;
 }
