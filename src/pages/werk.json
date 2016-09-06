@@ -1,6 +1,50 @@
 {
-    "page": {
-        "title": "Werke",
-        "teaser": "<p>Das ist ein Teasertext.</p><p>Mit zweiter Zeile</p>"
-    }
+  "page": {
+    "title": "Werke",
+    "teaser": "<p>Das ist ein Teasertext.</p><p>Mit zweiter Zeile</p>"
+  },
+  "work": [
+		{
+			"title": "Geiler Titel",
+			"year": 1984,
+			"links": [
+				{
+					"url": "#",
+					"text": "Download PDF (2,4 mb)"
+				},
+				{
+					"url": "#",
+					"text": "Download PDF (2,4 mb)"
+				},
+				{
+					"url": "#",
+					"text": "Download PDF (2,4 mb)"
+				},
+				{
+					"url": "#",
+					"text": "Download PDF (2,4 mb)"
+				},
+				{
+					"url": "#",
+					"text": "Download PDF (2,4 mb)"
+				},
+				{
+					"url": "#",
+					"text": "Download PDF (2,4 mb)"
+				},
+				{
+					"url": "#",
+					"text": "Download PDF (2,4 mb)"
+				}
+			]
+		},
+		{
+			"title": "Geile Mauer",
+			"year": 1989
+		},
+		{
+			"title": "Geile Mauer",
+			"year": 1989
+		}
+	]
 }

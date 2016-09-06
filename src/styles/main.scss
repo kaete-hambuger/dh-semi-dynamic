@@ -23,15 +23,40 @@ a {
   text-decoration: none;
   color: #243F91;
   font-weight: 400;
+
+  &:hover,
+	&:focus {
+	  text-decoration: underline;
+	}
+
+	&:active {
+	  opacity: 0.6;
+	}
 }
 
-a:hover,
-a:focus {
-  text-decoration: underline;
-}
+table {
+	width: 100%;
 
-a:active {
-  opacity: 0.6;
+	tr {
+		th,
+		td {
+			margin: 0;
+			padding: 4px 16px;
+			vertical-align: top;
+		}
+
+		th {
+			text-align: left;
+		}
+
+		td {
+			border-top: 1px solid #ccc;
+
+			&.links {
+				text-align: right;
+			}
+		}
+	}
 }
 
 /*
