@@ -1,7 +1,5 @@
 {{> header }}
 
-<h1>{{ page.title }}</h1>
-
 <div>
 	{{{ page.teaser }}}
 </div>
@@ -15,6 +13,9 @@
 			Erscheinungsjahr
 		</th>
 		<th>
+			Erscheinungsort
+		</th>
+		<th>
 			&nbsp;
 		</th>
 	</tr>
@@ -25,6 +26,9 @@
 			</td>
 			<td>
 				{{ this.year }}
+			</td>
+			<td>
+				{{	this.location	}}
 			</td>
 			<td class="links">
 				{{#if this.links }}

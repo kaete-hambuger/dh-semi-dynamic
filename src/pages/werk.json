@@ -1,29 +1,10 @@
 {
-  "page": {
-    "title": "Werke",
-    "teaser": "<p>Das ist ein Teasertext.</p><p>Mit zweiter Zeile</p>"
-  },
   "work": [
 		{
-			"title": "Geiler Titel",
-			"year": 1984,
+			"title": "Die Logik der Dichtung, 1.Auflage",
+			"year": 1957,
+			"location": "Stuttgart",
 			"links": [
-				{
-					"url": "#",
-					"text": "Download PDF (2,4 mb)"
-				},
-				{
-					"url": "#",
-					"text": "Download PDF (2,4 mb)"
-				},
-				{
-					"url": "#",
-					"text": "Download PDF (2,4 mb)"
-				},
-				{
-					"url": "#",
-					"text": "Download PDF (2,4 mb)"
-				},
 				{
 					"url": "#",
 					"text": "Download PDF (2,4 mb)"
@@ -39,12 +20,61 @@
 			]
 		},
 		{
-			"title": "Geile Mauer",
-			"year": 1989
+			"title": "Rilke - Eine Einführung, 1.Auflage",
+			"year": 1976,
+			"location": "Stuttgart",
+			"links": [
+				{
+					"url": "#",
+					"text": "Download PDF (2,4 mb)"
+				},
+				{
+					"url": "#",
+					"text": "Download PDF (2,4 mb)"
+				},
+				{
+					"url": "#",
+					"text": "Download PDF (2,4 mb)"
+				}
+			]
 		},
 		{
-			"title": "Geile Mauer",
-			"year": 1989
+			"title": "Novalis und die Mathematik. Eine Studie zur Erkenntnistheorie der Romantik",
+			"year": 1929,
+			"location": "Halle/Saale",
+			"links": [
+				{
+					"url": "#",
+					"text": "Download PDF (2,4 mb)"
+				},
+				{
+					"url": "#",
+					"text": "Download PDF (2,4 mb)"
+				},
+				{
+					"url": "#",
+					"text": "Download PDF (2,4 mb)"
+				}
+			]
+		},
+		{
+			"title": "Die Zeitlosigkeit der Dichtung",
+			"year": 1955,
+			"location": "Stuttgart",
+			"links": [
+				{
+					"url": "#",
+					"text": "Download PDF (2,4 mb)"
+				},
+				{
+					"url": "#",
+					"text": "Download PDF (2,4 mb)"
+				},
+				{
+					"url": "#",
+					"text": "Download PDF (2,4 mb)"
+				}
+			]
 		}
 	]
 }
