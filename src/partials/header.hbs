@@ -11,11 +11,13 @@
 			<img class="header-image" src="images/kaete-logo.png" alt="Logo - Kaete">
 		</div>
 	</div>
+
+
 	<nav>
 		<div class="container">
 			<ul>
 			{{#each global.navigation }}
-				<li>
+				<li {{#equal this.id ../page.id }}class="active"{{/equal}}>
 					<a href="{{ this.url }}" title="{{ this.hoverText }}">
 						{{ this.title }}
 					</a>

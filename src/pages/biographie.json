@@ -1,5 +1,6 @@
 {
-    "page": {
-        "teaser": "<p>Hier kommt der Text von Frau Löschner rajn.</p><p>Nur wann ist hier die Frage.</p>"
-    }
+  "page": {
+  	"id": "bio",
+    "teaser": "<p>Hier kommt der Text von Frau Löschner rajn.</p><p>Nur wann ist hier die Frage.</p>"
+  }
 }

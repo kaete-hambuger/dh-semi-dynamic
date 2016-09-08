@@ -122,7 +122,15 @@ gulp.task('compileStaticHtml', function() {
     }))
     .pipe(handlebars(globalMockDataJson,
       {
-        batch: [config.handlebarsPartials]
+        batch: [config.handlebarsPartials],
+        helpers : {
+          equal : function(v1, v2, options){
+            if(v1 === v2) {
+              return options.fn(this);
+            }
+            return options.inverse(this);
+          }
+        }
       }))
     .pipe(rename({
       extname: '.html'

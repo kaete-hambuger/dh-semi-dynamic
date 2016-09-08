@@ -4,32 +4,36 @@
 			{
 				"url": "/",
 				"hoverText": "Hier geht's zur Startseite",
-				"title": "Home"
+				"title": "Home",
+				"id": "home"
 			},
 			{
 				"url": "biographie.html",
 				"hoverText": "Hier geht's zur Biographie, geil geil geil",
-				"title": "Biographie"
+				"title": "Biographie",
+				"id": "bio"
 			},
 			{
 				"url": "werk.html",
 				"hoverText": "Hier geht's zum Werk, twerk twerk twerk",
-				"title": "Werk"
+				"title": "Werk",
+				"id": "work"
 			},
 			{
 				"url": "projekt.html",
 				"hoverText": "Hier geht's zum Projekt, object object object",
-				"title": "Über das Projekt"
+				"title": "Über das Projekt",
+				"id": "project"
 			}
 		],
 		"footer": [
 			{
-				"url": "#",
+				"url": "impressum.html",
 				"hoverText": "Hier geht's zum Impressum",
 				"title": "Impressum"
 			},
 			{
-				"url": "#",
+				"url": "kontakt.html",
 				"hoverText": "Hier geht's zum Kontakt",
 				"title": "Kontakt"
 			}
