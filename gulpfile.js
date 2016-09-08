@@ -3,6 +3,8 @@
 // Set global configuration
 var config = {
 	dist: 'www',
+  images: './src/images/*',
+  imagesOutput: './www/images',
 	styles: './src/styles/*.scss',
   stylesOutput: './www/styles',
 	handlebarsGlobalData: './src/global-data.json',
@@ -27,12 +29,14 @@ var sass = require('gulp-sass').sync;
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var plumber = require('gulp-plumber');
+var imagemin = require('gulp-imagemin');
 
 // Add default task
 gulp.task('default', function(cb) {
   	runSequence(
   		'compileStaticHtml',
       'sass',
+      'optimizeImages',
       'browserSync',
   		'watch'
   	)}
@@ -40,8 +44,8 @@ gulp.task('default', function(cb) {
 
 // Watch for changes and reload task
 gulp.task('watch', function(cb) {
-  watch(config.styles, function() {
-    gulp.start('compileStaticHtml')
+  watch(config.images, function() {
+    gulp.start('optimizeImages')
       .on('end', cb);
   });
   watch(config.handlebarsAll, function() {
@@ -69,13 +73,21 @@ gulp.task('sass', function() {
     }))
     .pipe(sourcemaps.init())
     .pipe(sass({errLogToConsole: true}))
-    //causes errors
-    //.pipe(autoprefixer())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(config.stylesOutput))
     .pipe(browserSync.stream());
 });
 
+
+// Gather images, optimize them and put into distributed directory 
+gulp.task('optimizeImages', function(){
+  // delete all distributed images first
+  del.sync(config.imagesOutput);
+
+  return gulp.src(config.images)
+    .pipe(imagemin())
+    .pipe(gulp.dest(config.imagesOutput));
+});
 
 // BrowserSync
 gulp.task('browserSync', function() {
