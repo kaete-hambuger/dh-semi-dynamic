@@ -1,0 +1,35 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #0C0C0C;
+}
+
+
+footer {
+  background-color: #A4A4A4;
+  color: #606060;
+  height: 120px;
+  font-size: 17px;
+}
+
+
+main {
+  min-height: 80vh;
+}
+
+a {
+  text-decoration: none;
+  color: #243F91;
+  font-weight: 400;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

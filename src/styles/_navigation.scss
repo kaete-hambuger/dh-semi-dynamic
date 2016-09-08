@@ -1,3 +1,36 @@
-.navigation {
-	
+nav {
+  width: 100%;
+  background: #3a3a3a;
+  font-size: 16px;
+
+  ul {
+	  margin: 0;
+	  padding: 0;
+
+	  li {
+		  position: relative;
+		  display: inline-block;
+		  list-style: none;
+		  
+		  &:hover,
+			&.active {
+			  background: #243F91;
+			}
+
+		  a {
+			  padding: 20px;
+			}
+		}
+	}
+
+	a {
+	  display: block;
+	  color: #fff;
+	  text-decoration: none;
+
+	  &:hover,
+		&:focus {
+		  text-decoration: none;
+		}
+	}
 }
