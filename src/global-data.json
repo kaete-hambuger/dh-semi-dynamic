@@ -9,19 +9,19 @@
 			},
 			{
 				"url": "biographie.html",
-				"hoverText": "Hier geht's zur Biographie, geil geil geil",
+				"hoverText": "Hier geht's zur Biographie",
 				"title": "Biographie",
 				"id": "bio"
 			},
 			{
 				"url": "werk.html",
-				"hoverText": "Hier geht's zum Werk, twerk twerk twerk",
+				"hoverText": "Hier geht's zum Werk",
 				"title": "Werk",
 				"id": "work"
 			},
 			{
 				"url": "projekt.html",
-				"hoverText": "Hier geht's zum Projekt, object object object",
+				"hoverText": "Hier geht's zum Projekt",
 				"title": "Über das Projekt",
 				"id": "project"
 			}
