@@ -9,15 +9,15 @@
 			"location": "Stuttgart",
 			"links": [
 				{
-					"url": "#",
+					"url": "downloads/die-logik-der-dichtung.pdf",
 					"text": "Download pdf (229,2 MB)"
 				},
 				{
-					"url": "#",
+					"url": "downloads/die-logik-der-dichtung.txt",
 					"text": "Download txt (1,5 MB)"
 				},
 				{
-					"url": "#",
+					"url": "downloads/die-logik-der-dichtung.tei",
 					"text": "Download tei (1,5 MB)"
 				}
 			]
